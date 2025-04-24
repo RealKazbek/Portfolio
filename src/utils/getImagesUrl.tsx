@@ -1,4 +1,4 @@
 export const getImagesUrl = (path: string): string => {
-    return `./img/${path}`;
+    return `./../../../assets/img/${path}`;
 };
   

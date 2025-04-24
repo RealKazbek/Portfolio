@@ -1,5 +1,4 @@
 import "./Hero.scss";
-
 import { getImagesUrl } from "../../utils/getImagesUrl";
 
 import Container from "react-bootstrap/Container";

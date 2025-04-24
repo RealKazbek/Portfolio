@@ -8,7 +8,7 @@ import Button from "react-bootstrap/Button";
 
 function Hero() {
   return (
-    <Container className="hero">
+    <Container className="hero" id="#Home">
       <Row className="align-items-center">
         <Col
           className="hero__content"

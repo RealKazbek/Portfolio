@@ -1,22 +1,22 @@
-html {
-  scroll-behavior: smooth;
-}
-
+// NAV LINS OR NAVBAR
 .navbar-nav {
   column-gap: 47px;
 
+  // NAV LINK
   .nav-link {
     position: relative;
+
     color: #f2f2f7 !important;
     opacity: 0.8 !important;
-    font-weight: 500;
-    font-size: 25px;
-    transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
     &:hover,
     &.active {
       opacity: 1 !important;
     }
+
+    font-weight: 500;
+    font-size: 25px;
+    transition: 0.3s ease-in-out;
 
     @media (min-width: 992px) {
       color: #000 !important;
@@ -36,7 +36,7 @@ html {
         height: 2px;
         background-color: #d02323;
         visibility: hidden;
-        transition: width 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
       }
 
       &:hover::before,
@@ -55,8 +55,10 @@ html {
 .navbar-brand,
 .offcanvas-title {
   color: #d02323 !important;
+
   font-weight: 600;
   font-size: 30px;
+
   cursor: pointer;
 }
 
@@ -72,10 +74,6 @@ html {
     box-shadow: none;
     outline: none;
   }
-}
-
-.header {
-  margin-bottom: 25px;
 }
 
 .offcanvas {

@@ -7,7 +7,7 @@ import Col from "react-bootstrap/Col";
 function About() {
   return (
     <Container className="about">
-      <h2 className="about__img-text mb-3">About me</h2>
+      <h2 className="about__img-text mb-4">About me</h2>
       <Row className="justify-content-between align-items-center">
         <Col xs={12} xl={5} className="about__img d-none d-xl-block">
           <img

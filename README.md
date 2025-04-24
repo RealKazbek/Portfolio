@@ -21,7 +21,7 @@ The goal of the project is to showcase my skills, projects, and provide an easy 
 - 🧠 Type-safe and maintainable code  
 - 💼 Includes sections: About Me, Projects, Contact  
 - ⚡ Optimized performance with smooth UI transitions  
-- 🌐 Ready for deployment (GitHub Pages / Netlify / Vercel)
+- 🌐 Ready for deployment GitHub Pages
 
 ## 🧠 Author
 

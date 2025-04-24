@@ -11,7 +11,7 @@ The goal of the project is to showcase my skills, projects, and provide an easy 
 - **TypeScript** – Strongly typed JavaScript  
 - **React** – Modern UI development  
 - **Bootstrap** – Ready-to-use responsive components  
-- **Sass (SCSS)** – Powerful styling with variables, nesting, and more  
+- **SCSS (Sass)** – Powerful styling with variables, nesting, and more  
 - **Git** – Version control
 
 ## 🧩 Features
@@ -29,4 +29,5 @@ The goal of the project is to showcase my skills, projects, and provide an easy 
 
 - 💡 Passionate about clean code, positive mindset, and growth
 
-- 📫 Telegram | Instagram: @RealKazbek
+- 📫 Telegram | Instagram
+-  @RealKazbek

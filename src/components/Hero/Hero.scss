@@ -1,0 +1,76 @@
+.container.hero {
+  margin-bottom: 130px;
+  font-family: "Roboto", sans-serif;
+
+  .hero__content {
+    .hero__content-title {
+      font-weight: 800;
+      font-size: 72px;
+      background: linear-gradient(90deg, #000000 15%, #ff0000 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @media (max-width: 767px) {
+        font-size: 65px;
+        text-align: center;
+      }
+    }
+
+    .hero__content-subtitle {
+      font-weight: 400;
+      font-size: 30px;
+      margin: 33px 0 52px 0;
+
+      @media (max-width: 767px) {
+        text-align: center;
+      }
+    }
+
+    .hero__content-btn {
+      @media (max-width: 767px) {
+        display: flex;
+        justify-content: center;
+      }
+
+      .btn {
+        font-family: "Outfit", sans-serif;
+        font-weight: 600;
+        font-size: 30px;
+        padding: 17px 26px;
+        border-radius: 100px;
+        border-color: #d02323;
+        color: #d02323;
+        transition: 0.3s ease-in-out, 0.1s transform ease-in-out;
+
+        &:hover,
+        &:focus-visible {
+          background-color: #d02323;
+          color: #f2f2f7;
+        }
+
+        &:focus,
+        &:visited {
+          outline: none;
+          box-shadow: none;
+        }
+
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+
+  .hero__img {
+    padding: 50px;
+
+    @media (min-width: 768px) {
+      padding: 50px 0 50px 50px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

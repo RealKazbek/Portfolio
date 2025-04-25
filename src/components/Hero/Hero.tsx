@@ -1,5 +1,6 @@
 import "./Hero.scss";
-import { getImagesUrl } from "../../utils/getImagesUrl";
+
+import hero from "../../../assets/img/hero.png"
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -31,7 +32,7 @@ function Hero() {
           md={{ span: 6, order: 2 }}
           xs={{ span: 12, order: 1 }}
         >
-          <img src={getImagesUrl("hero.png")} alt="Hero" />
+          <img src={hero} alt="Hero" />
         </Col>
       </Row>
     </Container>

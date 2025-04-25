@@ -1,6 +1,10 @@
 import "./About.scss";
 
-import { getImagesUrl } from "../../utils/getImagesUrl";
+import about from "../../../assets/img/about.png"
+import cursor from "../../../assets/img/cursor.svg"
+import computer from "../../../assets/img/computer.svg"
+import site from "../../../assets/img/site.svg"
+
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -14,7 +18,7 @@ function About() {
         <Col xs={12} xl={5} className="about__img d-none d-xl-block">
           <img
             className="about__img-img"
-            src={getImagesUrl("about.png")}
+            src={about}
             alt="about"
           />
         </Col>
@@ -22,24 +26,24 @@ function About() {
         <Col xs={12} xl={6} className="about__content">
           {[
             {
-              icon: "cursor.svg",
+              icon: cursor,
               title: "Frontend Developer",
               text: "I create responsive sites with React. My code is cleaner than my desk!",
             },
             {
-              icon: "computer.svg",
+              icon: computer,
               title: "Backend Developer",
               text: "I build fast back-end systems. My APIs are faster than my morning coffee!",
             },
             {
-              icon: "site.svg",
+              icon: site,
               title: "Telegram Bot Developer",
               text: "I build Telegram bots with Python. My bots have fewer bugs than my last coffee break!",
             },
           ].map((item, index) => (
             <div className="about__content-block" key={index}>
               <div className="about__content-img">
-                <img src={getImagesUrl(item.icon)} alt={item.title} />
+                <img src={item.icon} alt={item.title} />
               </div>
               <div className="about__content-text">
                 <h2 className="about__content-title">{item.title}</h2>

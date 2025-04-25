@@ -1,6 +1,6 @@
 import "./Hero.scss";
 
-import hero from "../../../assets/img/hero.png"
+import hero from "../../../assets/img/png/hero.png";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";

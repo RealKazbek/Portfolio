@@ -1,10 +1,10 @@
 import "./About.scss";
 
-import about from "../../../assets/img/about.png"
-import cursor from "../../../assets/img/cursor.svg"
-import computer from "../../../assets/img/computer.svg"
-import site from "../../../assets/img/site.svg"
+import about from "../../../assets/img/png/about.png"
 
+import cursor from "../../../assets/img/svg/cursor.svg"
+import computer from "../../../assets/img/svg/computer.svg"
+import site from "../../../assets/img/svg/site.svg"
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";

@@ -6,9 +6,9 @@ import Col from "react-bootstrap/Col";
 
 // ICONS FROM
 // <a target="_blank" href="https://icons8.com/icon/16318/github">GitHub</a> иконка от <a target="_blank" href="https://icons8.com">Icons8</a>
-import telegram from "../../../assets/img/telegram.svg";
-import instagram from "../../../assets/img/instagram.svg";
-import github from "../../../assets/img/github.svg";
+import telegram from "../../../assets/img/svg/telegram.svg";
+import instagram from "../../../assets/img/svg/instagram.svg";
+import github from "../../../assets/img/svg/github.svg";
 
 function Footer() {
   return (
@@ -42,7 +42,11 @@ function Footer() {
                   <img src={item.icon} alt={item.title} />
                 </div>
                 <div className="contacts__content-text">
-                  <h2 className="contacts__content-title"><a href={item.link} target="_blank">{item.title}</a></h2>
+                  <h2 className="contacts__content-title">
+                    <a href={item.link} target="_blank">
+                      {item.title}
+                    </a>
+                  </h2>
                 </div>
               </div>
             ))}

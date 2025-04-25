@@ -4,15 +4,15 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import html from "../../../assets/img/html.svg";
-import css from "../../../assets/img/css.svg";
-import bootstrap from "../../../assets/img/bootstrap.svg";
-import javascript from "../../../assets/img/javascript.svg";
-import typescript from "../../../assets/img/typescript.svg";
-import react from "../../../assets/img/react.svg";
+import html from "../../../assets/img/svg/html.svg";
+import css from "../../../assets/img/svg/css.svg";
+import bootstrap from "../../../assets/img/svg/bootstrap.svg";
+import javascript from "../../../assets/img/svg/javascript.svg";
+import typescript from "../../../assets/img/svg/typescript.svg";
+import react from "../../../assets/img/svg/react.svg";
 
-import school from "../../../assets/img/school.svg";
-import iitu from "../../../assets/img/iitu.svg";
+import school from "../../../assets/img/svg/school.svg";
+import iitu from "../../../assets/img/svg/iitu.svg";
 
 // ICONS FROM https://icons8.com
 {

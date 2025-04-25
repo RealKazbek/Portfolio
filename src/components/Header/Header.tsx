@@ -28,7 +28,7 @@ function Header() {
               <Nav className="justify-content-end flex-grow-1">
                 <Nav.Link href="#About">About</Nav.Link>
                 <Nav.Link href="#Experience">Experience</Nav.Link>
-                <Nav.Link href="#Projects">Projects</Nav.Link>
+                <Nav.Link href="#Education">Education</Nav.Link>
                 <Nav.Link href="#Contacts">Contacts</Nav.Link>
               </Nav>
             </Offcanvas.Body>

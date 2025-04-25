@@ -21,7 +21,7 @@ import iitu from "../../../assets/img/iitu.svg";
 
 function Experience() {
   return (
-    <Container id="#Experience" className="experience">
+    <Container className="experience">
       <Row>
         <Col>
           <h2 className="experience__title mb-4">Experience</h2>
@@ -32,7 +32,7 @@ function Experience() {
       </Row>
 
       <Row className="justify-content-between align-items-start">
-        <Col xs={12} xl={5} className="experience__skills">
+        <Col xs={12} xl={5} className="experience__skills" id="Experience">
           {[
             {
               icon: html,
@@ -69,7 +69,7 @@ function Experience() {
             </div>
           ))}
         </Col>
-        <Col xs={12} xl={6} className="experience__education">
+        <Col xs={12} xl={6} className="experience__education" id="Education">
           <h2 className="experience__title mb-4 educationSecond">Education</h2>
 
           {[

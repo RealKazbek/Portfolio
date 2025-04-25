@@ -1,33 +1,43 @@
 .container.experience {
   margin-bottom: 150px;
 
+  @media (max-width: 1200px) {
+    margin-bottom: 50px;
+  }
+
   .experience__title {
     color: #d02323;
     font-weight: 700;
     font-size: 35px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    margin-bottom: 30px;
+    text-align: center;
 
     @media (max-width: 676px) {
       font-size: 30px;
-      text-align: center;
     }
 
-    @media (max-width: 1200px) {
-      margin-bottom: 30px;
-    }
-  }
-
-  .educationFirst {
-    .experience__title {
+    &.educationFirstTitle {
       @media (max-width: 1200px) {
         display: none;
+      }
+    }
+
+    &.educationSecondTitle {
+      display: none;
+
+      @media (max-width: 1200px) {
+        display: block;
+        margin: 50px 0 0 0;
+        padding: 0;
       }
     }
   }
 
   .experience__skills {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 38px;
 
@@ -39,7 +49,6 @@
       display: flex;
       flex-direction: column;
       gap: 14px;
-      justify-content: space-between;
       align-items: center;
 
       .experience__content-img {
@@ -47,21 +56,17 @@
         height: 120px;
         border: 2px solid #f9b1b1;
         border-radius: 100%;
-
+        background-color: rgb(254, 244, 244);
         display: flex;
         justify-content: center;
         align-items: center;
-
-        background-color: rgb(254, 244, 244);
       }
 
-      .experience__content-text {
-        .experience__content-title {
-          font-family: "Roboto", sans-serif;
-          font-weight: 500;
-          font-size: 20px;
-          letter-spacing: 0.05em;
-        }
+      .experience__content-title {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        letter-spacing: 0.05em;
       }
     }
   }
@@ -69,27 +74,15 @@
   .experience__education {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
+    align-items: center;
     gap: 40px;
-
-    .educationSecond {
-      padding: 0;
-      margin: 80px 0 0 0;
-
-      @media (min-width: 1200px) {
-        display: none;
-      }
-    }
 
     .about__content-block {
       width: 100%;
       display: flex;
       align-items: center;
       gap: 17px;
-
       padding: 15px 24px;
-
       border: 2px solid #d02323;
       border-radius: 20px;
       box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
@@ -106,15 +99,14 @@
         transform: scale(0.95) rotateZ(1.7deg);
       }
 
-      .about__content-img {
-        img {
-          width: 50px;
-        }
+      .about__content-img img {
+        width: 50px;
       }
 
       .about__content-text {
         font-family: "Roboto", sans-serif;
-        .about__content-text {
+
+        h2 {
           font-weight: 600;
           font-size: 25px;
           letter-spacing: 0.05em;
@@ -125,10 +117,11 @@
           }
         }
 
-        .about__content-subtitle {
+        p {
           font-weight: 300;
           font-size: 20px;
           margin: 0;
+
           @media (max-width: 576px) {
             font-size: 15px;
           }

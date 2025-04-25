@@ -41,13 +41,11 @@ function Footer() {
                 <div className="contacts__content-img">
                   <img src={item.icon} alt={item.title} />
                 </div>
-                <div className="contacts__content-text">
-                  <h2 className="contacts__content-title">
-                    <a href={item.link} target="_blank">
-                      {item.title}
-                    </a>
-                  </h2>
-                </div>
+                <h2 className="contacts__content-title">
+                  <a href={item.link} target="_blank" rel="noopener noreferrer">
+                    {item.title}
+                  </a>
+                </h2>
               </div>
             ))}
           </Col>

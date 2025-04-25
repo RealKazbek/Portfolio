@@ -21,8 +21,7 @@
     @media (min-width: 992px) {
       color: #000 !important;
 
-      &:hover,
-      &.active {
+      &:hover {
         color: #d02323 !important;
       }
 
@@ -39,14 +38,9 @@
         transition: 0.3s ease-in-out;
       }
 
-      &:hover::before,
-      &.active::before {
+      &:hover::before {
         width: 70%;
         visibility: visible;
-      }
-
-      &.active:hover::before {
-        width: 50%;
       }
     }
   }
@@ -69,6 +63,7 @@
 .navbar-toggler,
 .btn-close {
   border: 0;
+  background-color: #fff;
 
   &:focus {
     box-shadow: none;

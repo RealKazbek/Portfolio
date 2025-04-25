@@ -36,18 +36,18 @@ const education = [
 
 function Experience() {
   return (
-    <Container className="experience">
+    <Container className="experience" id="Experience">
       <Row className="justify-content-between align-items-start">
         <Col xs={12} xl={5}>
           <h2 className="experience__title">Experience</h2>
         </Col>
-        <Col xs={12} xl={6} className="educationFirst">
+        <Col xs={12} xl={6} className="educationFirst"  id="Education">
           <h2 className="experience__title educationFirstTitle">Education</h2>
         </Col>
       </Row>
 
       <Row className="justify-content-between align-items-start">
-        <Col xs={12} xl={5} className="experience__skills" id="Experience">
+        <Col xs={12} xl={5} className="experience__skills">
           {skills.map((item, index) => (
             <div className="experience__content-block" key={index}>
               <div className="experience__content-img">
@@ -58,7 +58,7 @@ function Experience() {
           ))}
         </Col>
 
-        <Col xs={12} xl={6} className="experience__education" id="Education">
+        <Col xs={12} xl={6} className="experience__education">
           <h2 className="experience__title educationSecondTitle">Education</h2>
           {education.map((item, index) => (
             <div className="about__content-block" key={index}>

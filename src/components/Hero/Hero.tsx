@@ -23,7 +23,9 @@ function Hero() {
             notes!{" "}
           </p>
           <div className="hero__content-btn">
-            <Button variant="outline-primary">Contact Me</Button>
+            <a href="#Contacts">
+              <Button variant="outline-primary">Contact Me</Button>
+            </a>
           </div>
         </Col>
 

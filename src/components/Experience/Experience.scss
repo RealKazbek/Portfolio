@@ -1,0 +1,139 @@
+.container.experience {
+  margin-bottom: 150px;
+
+  .experience__title {
+    color: #d02323;
+    font-weight: 700;
+    font-size: 35px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    @media (max-width: 676px) {
+      font-size: 30px;
+      text-align: center;
+    }
+
+    @media (max-width: 1200px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .educationFirst {
+    .experience__title {
+      @media (max-width: 1200px) {
+        display: none;
+      }
+    }
+  }
+
+  .experience__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 38px;
+
+    @media (max-width: 576px) {
+        justify-content: space-around;;
+    }
+
+    .experience__content-block {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      justify-content: space-between;
+      align-items: center;
+
+      .experience__content-img {
+        width: 120px;
+        height: 120px;
+        border: 2px solid #f9b1b1;
+        border-radius: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: rgb(254, 244, 244);
+      }
+
+      .experience__content-text {
+        .experience__content-title {
+          font-family: "Roboto", sans-serif;
+          font-weight: 500;
+          font-size: 20px;
+          letter-spacing: 0.05em;
+        }
+      }
+    }
+  }
+
+  .experience__education {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 40px;
+
+    .educationSecond {
+      padding: 0;
+      margin: 50px 0 0 0 ;
+
+      @media (min-width: 1200px) {
+        display: none;
+      }
+    }
+
+    .about__content-block {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 17px;
+
+      padding: 19px 24px;
+
+      border: 2px solid #d02323;
+      border-radius: 20px;
+      box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+      backdrop-filter: blur(6px);
+      cursor: pointer;
+      transition: all 0.5s;
+      user-select: none;
+
+      &:hover {
+        transform: scale(1.01);
+      }
+
+      &:active {
+        transform: scale(0.95) rotateZ(1.7deg);
+      }
+
+      .about__content-img {
+        img {
+          width: 50px;
+        }
+      }
+
+      .about__content-text {
+        font-family: "Roboto", sans-serif;
+        .about__content-text {
+          font-weight: 600;
+          font-size: 25px;
+          letter-spacing: 0.05em;
+          color: #d02323;
+
+          @media (max-width: 576px) {
+            font-size: 20px;
+          }
+        }
+
+        .about__content-subtitle {
+          font-weight: 300;
+          font-size: 20px;
+
+          @media (max-width: 576px) {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}

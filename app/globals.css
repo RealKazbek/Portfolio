@@ -24,3 +24,17 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+
+/* Animation */
+/* BURGER MENU */
+.animate-enter {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-exit {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+

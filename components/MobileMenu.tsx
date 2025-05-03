@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Link from "next/link";
 import Image from "next/image";
@@ -38,22 +38,27 @@ function MobileMenu({
   languages: Array<string>;
   setLanguage: React.Dispatch<React.SetStateAction<string>>;
 }) {
+  const [shouldRender, setShouldRender] = useState(false);
+  const [animationClass, setAnimationClass] = useState("");
+
   useEffect(() => {
     if (menuOpen) {
+      setShouldRender(true);
+      setTimeout(() => setAnimationClass("animate-enter"), 10);
       document.body.style.overflow = "hidden";
     } else {
+      setAnimationClass("animate-exit");
       document.body.style.overflow = "auto";
+      setTimeout(() => setShouldRender(false), 300);
     }
-
-    return () => {
-      document.body.style.overflow = "auto";
-    };
   }, [menuOpen]);
 
   return (
-    <div>
-      {menuOpen && (
-        <div className="fixed inset-0 bg-[var(--background)] z-50 flex flex-col justify-between p-4 pt-12 xl:hidden">
+    <>
+      {shouldRender && (
+        <div
+          className={`fixed inset-0 bg-[var(--background)] z-50 flex flex-col justify-between p-4 pt-12 xl:hidden transition-all duration-300 ease-in-out ${animationClass}`}
+        >
           <div className="flex flex-col justify-start items-start gap-5">
             <ul className="flex flex-col space-y-6 text-xl mt-13">
               {navItems.map((item, index) => {
@@ -106,7 +111,7 @@ function MobileMenu({
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }
 

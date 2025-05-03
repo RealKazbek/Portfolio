@@ -13,8 +13,12 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname: string = usePathname();
   const languages = ["EN", "RU", "KZ"];
-  const savedLanguage = "EN";
   
+  const [language, setLanguage] = useState(() => {
+    const savedLanguage = localStorage.getItem("language");
+    return savedLanguage ? savedLanguage : "EN";
+  });
+
   useEffect(() => {
     const savedLanguage = localStorage.getItem("language");
     if (savedLanguage) {
@@ -22,8 +26,6 @@ function Header() {
     }
   }, []);
 
-  const [language, setLanguage] = useState(savedLanguage ? savedLanguage : "EN");
-  
   const saveLanguage = (value: string) => {
     setLanguage(value);
     localStorage.setItem("language", value);
@@ -61,8 +63,7 @@ function Header() {
           ? "before:rotate-45 before:top-0 after:-rotate-45 after:top-0 after:w-6"
           : "before:-translate-y-1.5 after:translate-y-1.5"
       }
-    `}
-          />
+    `} />
         </button>
       </div>
 

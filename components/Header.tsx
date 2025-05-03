@@ -26,6 +26,7 @@ function Header() {
             language={language}
             languages={languages}
             setLanguage={setLanguage}
+            textSize={16}
           />
         </div>
 

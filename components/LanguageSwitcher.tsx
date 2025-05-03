@@ -5,18 +5,22 @@ function LanguageSwitcher({
   language,
   languages,
   setLanguage,
+  textSize,
 }: {
   language: string;
   languages: Array<string>;
   setLanguage: React.Dispatch<React.SetStateAction<string>>;
+  textSize: number;
 }) {
   return (
     <div className="relative group">
-      <div className="flex items-center gap-1 cursor-pointer text-l bg-transparent">
+      <div className={`flex items-center gap-1 cursor-pointer text-[${textSize}px] bg-transparent`}>
         {language}
         <Image
           src="./assets/images/icons/arrow.svg"
           alt="<->"
+          width={10}
+          height={5}
           className="transition-transform duration-300 ease-in-out group-hover:rotate-180"
         />
       </div>
@@ -25,7 +29,7 @@ function LanguageSwitcher({
           <li
             key={lang}
             onClick={() => setLanguage(lang)}
-            className="px-4 py-2 hover:bg-[var(--primary)] cursor-pointer"
+            className={`px-4 py-2 hover:bg-[var(--primary)] text-[${textSize}px] cursor-pointer`}
           >
             {lang}
           </li>

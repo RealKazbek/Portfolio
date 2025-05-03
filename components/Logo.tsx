@@ -9,6 +9,8 @@ const Logo = React.memo(() => {
         src="./assets/images/icons/default.svg"
         alt="Logo"
         className="h-4 w-4"
+        width={16}
+        height={16}
       />
       <span className="text-l font-bold">Kazbek</span>
     </Link>

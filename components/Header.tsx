@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -12,8 +12,22 @@ const navItems: Array<string> = ["home", "projects", "about-me", "contacts"];
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname: string = usePathname();
-  const [language, setLanguage] = useState("EN");
   const languages = ["EN", "RU", "KZ"];
+  const savedLanguage = "EN";
+  
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("language");
+    if (savedLanguage) {
+      setLanguage(savedLanguage);
+    }
+  }, []);
+
+  const [language, setLanguage] = useState(savedLanguage ? savedLanguage : "EN");
+  
+  const saveLanguage = (value: string) => {
+    setLanguage(value);
+    localStorage.setItem("language", value);
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-[var(--background)]">
@@ -25,7 +39,7 @@ function Header() {
           <LanguageSwitcher
             language={language}
             languages={languages}
-            setLanguage={setLanguage}
+            saveLanguage={saveLanguage}
             textSize={16}
           />
         </div>
@@ -60,6 +74,7 @@ function Header() {
         language={language}
         languages={languages}
         setLanguage={setLanguage}
+        saveLanguage={saveLanguage}
       />
     </header>
   );

@@ -28,7 +28,7 @@ function MobileMenu({
   pathname,
   language,
   languages,
-  setLanguage,
+  saveLanguage,
 }: {
   navItems: Array<string>;
   menuOpen: boolean;
@@ -37,6 +37,7 @@ function MobileMenu({
   language: string;
   languages: Array<string>;
   setLanguage: React.Dispatch<React.SetStateAction<string>>;
+  saveLanguage: (saveLanguage: string) => void;
 }) {
   const [shouldRender, setShouldRender] = useState(false);
   const [animationClass, setAnimationClass] = useState("");
@@ -86,7 +87,7 @@ function MobileMenu({
             <LanguageSwitcher
               language={language}
               languages={languages}
-              setLanguage={setLanguage}
+              saveLanguage={saveLanguage}
               textSize={32}
             />
           </div>

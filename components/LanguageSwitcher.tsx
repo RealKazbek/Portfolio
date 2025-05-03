@@ -4,12 +4,12 @@ import Image from "next/image";
 function LanguageSwitcher({
   language,
   languages,
-  setLanguage,
+  saveLanguage,
   textSize,
 }: {
   language: string;
   languages: Array<string>;
-  setLanguage: React.Dispatch<React.SetStateAction<string>>;
+  saveLanguage: (language: string) => void;
   textSize: number;
 }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,7 +52,7 @@ function LanguageSwitcher({
             <li
               key={lang}
               onClick={() => {
-                setLanguage(lang);
+                saveLanguage(lang);
                 setIsOpen(false);
               }}
               className={`px-4 py-2 hover:bg-[var(--primary)] text-[${textSize}px] cursor-pointer`}

@@ -14,11 +14,8 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname: string = usePathname();
   const languages = ["EN", "KZ", "RU"];
-  
-  const [language, setLanguage] = useState(() => {
-    const savedLanguage = localStorage.getItem("language");
-    return savedLanguage ? savedLanguage : "EN";
-  });
+
+  const [language, setLanguage] = useState("EN");
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem("language");
@@ -34,7 +31,7 @@ function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-[var(--background)]">
-      <Media/>
+      <Media />
 
       <div className="px-4 xl:px-0 xl:max-w-[1024px] mx-auto py-4 flex items-center justify-between">
         <Logo />
@@ -57,16 +54,17 @@ function Header() {
         >
           <span
             className={`relative block w-6 h-6
-      before:content-[''] before:top-4 before:right-1 before:absolute before:w-6 before:h-0.5 before:bg-[var(--gray)]
-      before:transition-transform before:duration-300
-      after:content-[''] after:top-4 after:right-1 after:absolute after:w-4 after:h-0.5 after:bg-[var(--gray)]
-      after:transition-transform after:duration-300
-      ${
-        menuOpen
-          ? "before:rotate-45 before:top-0 after:-rotate-45 after:top-0 after:w-6"
-          : "before:-translate-y-1.5 after:translate-y-1.5"
-      }
-    `} />
+              before:content-[''] before:top-4 before:right-1 before:absolute before:w-6 before:h-0.5 before:bg-[var(--gray)]
+              before:transition-transform before:duration-300
+              after:content-[''] after:top-4 after:right-1 after:absolute after:w-4 after:h-0.5 after:bg-[var(--gray)]
+              after:transition-transform after:duration-300
+              ${
+                menuOpen
+                  ? "before:rotate-45 before:top-0 after:-rotate-45 after:top-0 after:w-6"
+                  : "before:-translate-y-1.5 after:translate-y-1.5"
+              }
+            `}
+          />
         </button>
       </div>
 

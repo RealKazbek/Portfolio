@@ -6,13 +6,14 @@ import Navigation from "./Navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { usePathname } from "next/navigation";
 import MobileMenu from "./MobileMenu";
+import Media from "./Media";
 
 const navItems: Array<string> = ["home", "projects", "about-me", "contacts"];
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname: string = usePathname();
-  const languages = ["EN", "RU", "KZ"];
+  const languages = ["EN", "KZ", "RU"];
   
   const [language, setLanguage] = useState(() => {
     const savedLanguage = localStorage.getItem("language");
@@ -33,6 +34,8 @@ function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-[var(--background)]">
+      <Media/>
+
       <div className="px-4 xl:px-0 xl:max-w-[1024px] mx-auto py-4 flex items-center justify-between">
         <Logo />
 

@@ -1,10 +1,11 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Logo = React.memo(() => {
   return (
     <Link href="/" className="flex items-center space-x-2 z-100">
-      <img
+      <Image
         src="./assets/images/icons/default.svg"
         alt="Logo"
         className="h-4 w-4"
@@ -13,5 +14,7 @@ const Logo = React.memo(() => {
     </Link>
   );
 });
+
+Logo.displayName = "Logo";
 
 export default Logo;

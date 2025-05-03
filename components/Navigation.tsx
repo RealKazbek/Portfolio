@@ -1,10 +1,16 @@
 import React from "react";
 import Link from "next/link";
 
-function Navigation({navItems, pathname}: {navItems: Array<string>, pathname: string}) {
+function Navigation({
+  navItems,
+  pathname,
+}: {
+  navItems: Array<string>;
+  pathname: string;
+}) {
   return (
     <ul className="flex space-x-8">
-      {navItems.map((item:string, index:number) => {
+      {navItems.map((item: string, index: number) => {
         const href = `/${item === "home" ? "" : item}`;
         const isActive =
           pathname === href || (item === "home" && pathname === "/");
@@ -27,5 +33,7 @@ function Navigation({navItems, pathname}: {navItems: Array<string>, pathname: st
     </ul>
   );
 }
+
+Navigation.displayName = "Navigation";
 
 export default Navigation;

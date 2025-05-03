@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 function LanguageSwitcher({
   language,
@@ -13,8 +14,9 @@ function LanguageSwitcher({
     <div className="relative group">
       <div className="flex items-center gap-1 cursor-pointer text-l bg-transparent">
         {language}
-        <img
+        <Image
           src="./assets/images/icons/arrow.svg"
+          alt="<->"
           className="transition-transform duration-300 ease-in-out group-hover:rotate-180"
         />
       </div>
@@ -32,5 +34,7 @@ function LanguageSwitcher({
     </div>
   );
 }
+
+LanguageSwitcher.displayName = "LanguageSwitcher";
 
 export default LanguageSwitcher;

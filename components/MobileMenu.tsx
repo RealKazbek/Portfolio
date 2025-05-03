@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Link from "next/link";
+import Image from "next/image";
 
 const socialLinks = [
   {
@@ -92,7 +93,11 @@ function MobileMenu({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={link.src} alt={link.alt} className="w-10 h-10 opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out " />
+                <Image
+                  src={link.src}
+                  alt={link.alt}
+                  className="w-10 h-10 opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out "
+                />
               </a>
             ))}
           </div>
@@ -101,5 +106,7 @@ function MobileMenu({
     </div>
   );
 }
+
+MobileMenu.displayName = "MobileMenu";
 
 export default MobileMenu;

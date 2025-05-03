@@ -14,7 +14,7 @@ function LanguageSwitcher({
       <div className="flex items-center gap-1 cursor-pointer text-l bg-transparent">
         {language}
         <img
-          src="/assets/images/icons/arrow.svg"
+          src="./assets/images/icons/arrow.svg"
           className="transition-transform duration-300 ease-in-out group-hover:rotate-180"
         />
       </div>

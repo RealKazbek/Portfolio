@@ -5,7 +5,7 @@ const Logo = React.memo(() => {
   return (
     <Link href="/" className="flex items-center space-x-2 z-100">
       <img
-        src="/assets/images/icons/default.svg"
+        src="./assets/images/icons/default.svg"
         alt="Logo"
         className="h-4 w-4"
       />

@@ -4,17 +4,17 @@ import Link from "next/link";
 
 const socialLinks = [
   {
-    src: "/assets/images/icons/telegram.svg",
+    src: "./assets/images/icons/telegram.svg",
     alt: "Telegram",
     href: "https://t.me/RealKazbek",
   },
   {
-    src: "/assets/images/icons/github.svg",
+    src: "./assets/images/icons/github.svg",
     alt: "GitHub",
     href: "https://github.com/RealKazbek",
   },
   {
-    src: "/assets/images/icons/instagram.svg",
+    src: "./assets/images/icons/instagram.svg",
     alt: "Instagram",
     href: "https://www.instagram.com/realkazbek",
   },

@@ -2,7 +2,7 @@ import React from "react";
 
 function Quote() {
   return (
-    <section className="relative mt-14 md:mt-28 flex justify-end">
+    <section className="overflow-x-hidden relative mt-14 md:mt-28 flex justify-end">
       <span className="absolute inline-block w-23 h-23 border border-[var(--gray)] mt-7 mr-[-80px] lg:mr-[-30px]"></span>
       <blockquote
         cite="https://chatgpt.com/"

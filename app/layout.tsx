@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${firaCode.variable}`}>
         <Header />
-        {children}
+        <main className="pt-[72px]">{children}</main>
         <Footer />
       </body>
     </html>

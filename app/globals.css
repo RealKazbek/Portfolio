@@ -2,6 +2,7 @@
 
 :root {
   --primary: #c778dd;
+  --opacity: rgba(199, 120, 221, 0.25);
   --gray: #abb2bf;
   --background: #282c33;
   --white: #fff;
@@ -25,9 +26,8 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-
-/* Animation */
-/* BURGER MENU */
+/*? Animation */
+/* Burger menu */
 .animate-enter {
   opacity: 1;
   transform: translateY(0);

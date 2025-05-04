@@ -35,6 +35,7 @@ function Media() {
             alt={link.alt}
             width={32}
             height={32}
+            priority={true}
             className="opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out "
           />
         </a>
@@ -42,5 +43,7 @@ function Media() {
     </div>
   );
 }
+
+Media.displayName = "Media";
 
 export default Media;

@@ -1,6 +1,7 @@
 import { Fira_Code } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const firaCode = Fira_Code({
   variable: "--font-family",
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body className={`${firaCode.variable}`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

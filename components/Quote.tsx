@@ -10,8 +10,8 @@ function Quote() {
       >
         <p
           className={`border p-4 md:p-8 border-[var(--gray)] font-medium
-        before:content-['\"'] before:h-7 before:absolute before:-top-4 before:font-medium before:text-6xl before:text-[var(--gray)] before:bg-[var(--background)]
-        after:content-['\"'] after:h-7 after:absolute after:bottom-8 md:after:bottom-12 after:rotate-180 after:right-8 md:after:right-4 after:font-medium after:text-6xl after:text-[var(--gray)] after:bg-[var(--background)]`}
+        before:content-['"'] before:h-7 before:absolute before:-top-4 before:font-medium before:text-6xl before:text-[var(--gray)] before:bg-[var(--background)]
+        after:content-['"'] after:h-7 after:absolute after:bottom-8 md:after:bottom-12 after:rotate-180 after:right-8 md:after:right-4 after:font-medium after:text-6xl after:text-[var(--gray)] after:bg-[var(--background)]`}
         >
           Any fool can write code that a computer can understand. Good
           programmers write code that humans can understand.

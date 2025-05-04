@@ -40,7 +40,7 @@ function Hero() {
             className="w-[25%] h-auto absolute mt-[55%] ml-[70%] z-3"
           />
           <Image
-            src="/assets/images/hero.png"
+            src="./assets/images/hero.png"
             alt="Person"
             width={0}
             height={0}

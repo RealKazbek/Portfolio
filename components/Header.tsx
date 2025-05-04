@@ -34,7 +34,7 @@ function Header() {
       <Media />
 
       <div className="px-4 xl:px-0 xl:max-w-[1024px] mx-auto py-4 flex items-center justify-between">
-        <Logo />
+        <Logo zIndex={100}/>
 
         <div className="hidden xl:flex items-center space-x-8">
           <Navigation navItems={navItems} pathname={pathname} />

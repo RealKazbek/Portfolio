@@ -33,7 +33,7 @@ function Footer() {
         <div className="flex sm:justify-between gap-4 flex-col sm:flex-row">
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-6">
-              <Logo />
+              <Logo zIndex={40}/>
               <a href={mailtoLink} className="text-[var(--gray)] transition-colors duration-300 ease-in-out hover:text-[var(--white)]">
                 37765@iitu.edu.kz
               </a>

@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const Logo = React.memo(() => {
+const Logo = React.memo(({zIndex}: {zIndex: number}) => {
   return (
-    <Link href="/" className="flex items-center space-x-2 z-100">
+    <Link href="/" className={`flex items-center space-x-2 z-${zIndex}`}>
       <Image
         src="./assets/images/icons/default.svg"
         alt="Logo"

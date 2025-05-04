@@ -9,7 +9,7 @@ interface ButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 
 function Button({ href = "/", children, className = "", ...props }: ButtonProps) {
   const baseClass =
-    "border border-[var(--primary)] py-2 px-4 font-medium transition-colors duration-300 ease-in-out hover:bg-[var(--opacity)]";
+    "border border-[var(--primary)] py-2 px-4 font-medium transition-colors duration-300 ease-in-out active:bg-[var(--opacity)] hover:bg-[var(--opacity)]";
 
   return (
     <Link href={href}>

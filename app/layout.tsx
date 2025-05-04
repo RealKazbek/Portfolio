@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${firaCode.variable} min-h-screen flex flex-col`}>
         <Header />
-        <main className="pt-[61px] flex-1">{children}</main>
+        <main className="pt-[56px] xl:pt-[61px] flex-1">{children}</main>
         <Footer />
       </body>
     </html>

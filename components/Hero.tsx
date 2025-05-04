@@ -4,7 +4,7 @@ import Button from "./Button";
 
 function Hero() {
   return (
-    <section className="px-4 xl:px-0 xl:max-w-[1024px] mt-[62px] mx-auto py-4 flex flex-col md:flex-row items-center gap-4">
+    <section className="px-4 xl:px-0 xl:max-w-[1024px] mt-[34px] xl:mt-[62px] mx-auto flex flex-col md:flex-row items-center gap-4">
       <div className="w-full md:w-1/2">
         <h3 className="text-4xl font-semibold">
           Kazbek is{" "}
@@ -33,7 +33,7 @@ function Hero() {
             className="w-[25%] h-auto absolute mt-[55%] ml-[70%] z-3"
           />
           <Image
-            src="./assets/images/hero.png"
+            src="/assets/images/hero.png"
             alt="Person"
             width={0}
             height={0}

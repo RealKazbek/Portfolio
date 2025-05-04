@@ -10,10 +10,7 @@ function Hero() {
           Kazbek is{" "}
           <span className="text-[var(--primary)]">Full-Stack developer</span>
         </h3>
-        <p className="text-[var(--gray)] mt-8 mb-6">
-          He builds responsive websites so smooth, even your grandma's Internet
-          Explorer might shed a tear.
-        </p>
+        <p className="text-[var(--gray)] mt-8 mb-6">{"He builds responsive websites so smooth, even your grandma's Internet Explorer might shed a tear"}</p>
         <Button href="/contacts">Contact me!!</Button>
       </div>
 

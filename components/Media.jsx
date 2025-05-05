@@ -21,7 +21,7 @@ const socialLinks = [
 
 function Media() {
   return (
-    <div className="absolute hidden flex-col gap-3 ml-4 mt-50 xl:flex items-center">
+    <div className="absolute hidden flex-col gap-3 ml-4 mt-50 xl:flex items-center bg-[var(--background)]">
       <span className="absolute w-0.5 h-45 bg-[var(--gray)] mt-[-200]"></span>
       {socialLinks.map((link, index) => (
         <a

@@ -5,34 +5,40 @@ import Image from "next/image";
 
 const cardList = [
   {
-    title: "ChertNodes",
-    subtitle: "Minecraft servers hosting ",
-    images: "chertNodes.png",
-    stacks: ["HTML", "SCSS", "Python", "Flask"],
-    buttons: ["Live <~>", "Cached >="],
+    title: "Portfolio",
+    subtitle: "A simple website is one of my first projects",
+    images: "portfolio.png",
+    stacks: ["HTML5", "SCSS", "Bootstrap", "TypeScript", "ReactJS", "Vite"],
+    buttons: [{
+      text: "Live <~>",
+      href: "https://realkazbek.github.io/Portfolio",
+    }, {
+      text: "GitHub >=",
+      href: "https://github.com/RealKazbek/Portfolio",
+    }],
   },
   {
-    title: "ProtectX",
-    subtitle: "Discord anti-crash bot",
-    images: "protectX.png",
+    title: "New Portfolio",
+    subtitle: "Made with Tailwind, TypeScript and NextJS",
+    images: "newPortfolio.png",
     stacks: [
-      "React",
-      "Express",
-      "Discord.js",
-      "Flask",
-      "Node.js",
-      "HTML",
-      "SCSS",
-      "Python",
+      "Tailwind",
+      "TypeScript",
+      "NextJs",
     ],
-    buttons: ["Live <~>"],
+    buttons: [{
+      text: "Live <~>",
+      href: "https://realkazbek.github.io/newPortfolio",
+    }, {
+      text: "GitHub >=",
+      href: "https://github.com/RealKazbek/newPortfolio",
+    }],
   },
   {
-    title: "Kahoot Answers Viewer",
-    subtitle: "Get answers to your kahoot quiz",
-    images: "kahoot.png",
-    stacks: ["CSS", "Express", "Node.js"],
-    buttons: ["Live <~>"],
+    title: "???",
+    subtitle: "???",
+    images: "empty.png",
+    stacks: ["?", "?", "?"],
   },
 ];
 
@@ -41,7 +47,7 @@ function Projects() {
     <section className="flex justify-end relative overflow-hidden">
       <span className="absolute inline-block w-40 h-40 border border-[var(--gray)] mt-50 -mr-38 xl:-mr-25"></span>
 
-      <div className="mt-18 px-4 xl:px-0 xl:max-w-[1024px] mx-auto py-4 gap-12 flex flex-col">
+      <div className="mt-8 md:mt-18 px-4 xl:px-0 xl:max-w-[1024px] mx-auto py-4 gap-12 flex flex-col">
         <Title href="projects">projects</Title>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full items-start">

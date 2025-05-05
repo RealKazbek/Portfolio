@@ -12,11 +12,11 @@ function Button({ href = "/", children, className = "", ...props }: ButtonProps)
     "border border-[var(--primary)] py-2 px-4 font-medium transition-colors duration-300 ease-in-out active:bg-[var(--opacity)] hover:bg-[var(--opacity)]";
 
   return (
-    <Link href={href}>
+    <a href={href} target="_blank">
       <span className={`inline-block ${baseClass} ${className}`} {...props}>
         {children}
       </span>
-    </Link>
+    </a>
   );
 }
 

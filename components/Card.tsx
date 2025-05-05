@@ -2,12 +2,18 @@ import Image from "next/image";
 import React from "react";
 import Button from "./Button";
 
+type CardButton = {
+  text: string;
+  href: string;
+};
+
 type CardProps = {
   images?: string;
   stacks?: string[];
   title: string;
   subtitle: string;
-  buttons?: string[];
+  buttons?: Array<CardButton>;
+  href?: string;
   type?: number;
 };
 
@@ -17,6 +23,7 @@ function Card({
   title,
   subtitle,
   buttons,
+  href,
   type = 1,
 }: CardProps) {
   return (
@@ -47,14 +54,14 @@ function Card({
       <div
         className={`${
           type === 2 && "py-1 text-[16px]"
-        } text-2xl py-2 w-full font-semibold px-4`}
+        } text-2xl pt-2 w-full font-semibold px-4`}
       >
         {title}
       </div>
       <div
         className={`${
           type === 2 && "border-t border-[var(--gray)]"
-        } border-b border-[var(--gray)] flex flex-col p-4 gap-4`}
+        } border-b border-[var(--gray)] flex flex-col py-2 px-4 gap-4`}
       >
         <span className={`text-[var(--gray)] ${type === 2 && "text-sm"}`}>
           {subtitle}
@@ -62,9 +69,11 @@ function Card({
 
         {buttons && (
           <div className="flex flex-wrap gap-4">
-            {buttons.map((item: string, index: number) => {
-              return <Button key={index}>{item}</Button>;
-            })}
+            {buttons.map((item, index: number) => (
+              <Button key={index} href={item.href}>
+                {item.text}
+              </Button>
+            ))}
           </div>
         )}
       </div>

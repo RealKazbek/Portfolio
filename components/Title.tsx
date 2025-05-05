@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-interface TitleProps {
+type TitleProps = {
   href?: string;
   children: string;
 }

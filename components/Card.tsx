@@ -12,15 +12,14 @@ type CardProps = {
 
 function Card({ images, stacks, title, subtitle, buttons }: CardProps) {
   return (
-    <div className="ml-15 w-[330px] border border-b-0 border-[var(--gray)] rounded overflow-hidden shadow-sm">
+    <div className="w-full border border-b-0 border-[var(--gray)] overflow-hidden">
       {images && (
         <div className="relative w-full h-[200px] border-b border-[var(--gray)]">
           <Image
-            src={images}
+            src={`./assets/images/${images}`}
             alt={title}
             fill
             className="object-cover"
-            sizes="330px"
           />
         </div>
       )}
@@ -28,7 +27,7 @@ function Card({ images, stacks, title, subtitle, buttons }: CardProps) {
       {stacks && (
         <div className="flex gap-2 p-2 flex-wrap border-b border-[var(--gray)]">
           {stacks.map((item: string, index: number) => {
-            return <span key={index}>{item}</span>;
+            return <span key={index} className="text-[var(--gray)]">{item}</span>;
           })}
         </div>
       )}

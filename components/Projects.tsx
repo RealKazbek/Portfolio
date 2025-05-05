@@ -34,29 +34,6 @@ const cardList = [
     stacks: ["CSS", "Express", "Node.js"],
     buttons: ["Live <~>"],
   },
-  {
-    title: "ProtectX",
-    subtitle: "Discord anti-crash bot",
-    images: "protectX.png",
-    stacks: [
-      "React",
-      "Express",
-      "Discord.js",
-      "Flask",
-      "Node.js",
-      "HTML",
-      "SCSS",
-      "Python",
-    ],
-    buttons: ["Live <~>"],
-  },
-  {
-    title: "Kahoot Answers Viewer",
-    subtitle: "Get answers to your kahoot quiz",
-    images: "kahoot.png",
-    stacks: ["CSS", "Express", "Node.js"],
-    buttons: ["Live <~>"],
-  },
 ];
 
 function Projects() {

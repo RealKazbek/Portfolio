@@ -8,11 +8,11 @@ type TitleProps = {
 
 function Title({ href, children }: TitleProps) {
   return (
-    <div className="px-4 xl:px-0 w-full xl:max-w-[1024px] mx-auto flex justify-between items-center font-medium">
+    <div className="w-full xl:max-w-[1024px] mx-auto flex justify-between items-center font-medium">
       <div className="flex items-center text-3xl lowercase flex-1">
         <span className="text-[var(--primary)]">#</span>
         <span>{children}</span>
-        <span className="ml-4 mr-0 md:mr-[5%] xl:mr-[20%] flex-grow h-0.5 bg-[var(--primary)]"></span>
+        <span className="ml-4 flex-grow h-0.5 bg-[var(--primary)]"></span>
       </div>
 
       {href && (

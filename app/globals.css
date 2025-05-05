@@ -26,7 +26,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/* !Animation */
+/** Animation */
 /* Burger menu */
 .animate-enter {
   opacity: 1;

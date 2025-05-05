@@ -13,7 +13,6 @@ type CardProps = {
   title: string;
   subtitle: string;
   buttons?: Array<CardButton>;
-  href?: string;
   type?: number;
 };
 
@@ -23,7 +22,6 @@ function Card({
   title,
   subtitle,
   buttons,
-  href,
   type = 1,
 }: CardProps) {
   return (

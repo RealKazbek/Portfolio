@@ -13,7 +13,7 @@ function Button({ href = "/", children, className = "", ...props }: ButtonProps)
 
   return (
     <Link href={href}>
-      <span className={`${baseClass} ${className}`} {...props}>
+      <span className={`inline-block ${baseClass} ${className}`} {...props}>
         {children}
       </span>
     </Link>

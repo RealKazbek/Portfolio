@@ -81,7 +81,6 @@ const projects = [
   },
 ];
 
-// Анимации
 const staggerContainer = {
   hidden: { opacity: 0 },
   visible: {
@@ -102,7 +101,6 @@ export default function ProjectsPage() {
         <motion.div
           initial="hidden"
           animate="visible"
-          variants={fadeInUp}
           className="max-w-3xl mx-auto mb-12 text-center space-y-4"
         >
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white">
@@ -124,7 +122,7 @@ export default function ProjectsPage() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {projects.map((project) => (
-            <motion.div key={project.id} variants={fadeInUp}>
+            <motion.div key={project.id}>
               <Card className="flex flex-col h-full bg-black/40 border-white/10 hover:border-green-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_-10px_rgba(16,185,129,0.2)] backdrop-blur-sm group overflow-hidden">
                 <div className="relative h-48 w-full rounded-t-xl overflow-hidden border-b border-white/5">
                   {project.image ? (

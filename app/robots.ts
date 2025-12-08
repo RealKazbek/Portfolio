@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/api/",
     },
-    sitemap: "https://kazbek.vercel.app/sitemap.xml",
+    sitemap: "https://kazbekport.vercel.app/sitemap.xml",
   };
 }

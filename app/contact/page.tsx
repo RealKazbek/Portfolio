@@ -20,7 +20,7 @@ import { motion } from "framer-motion";
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+    phone: "",
     subject: "",
     message: "",
   });
@@ -46,7 +46,7 @@ export default function ContactPage() {
 
       if (res.ok) {
         setIsSuccess(true);
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        setFormData({ name: "", phone: "", subject: "", message: "" });
         setTimeout(() => setIsSuccess(false), 5000);
       } else {
         alert("Ошибка при отправке. Попробуйте позже.");
@@ -169,7 +169,7 @@ export default function ContactPage() {
                       Отправлено!
                     </h3>
                     <p className="text-gray-400">
-                      Я получил ваше сообщение в Telegram и скоро отвечу.
+                      Я свяжусь с вами по указанному номеру.
                     </p>
                   </motion.div>
                 )}
@@ -185,21 +185,22 @@ export default function ContactPage() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="Имя"
+                        placeholder="Ваше имя"
                         className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus-visible:ring-green-500"
                       />
                     </div>
+
                     <div className="space-y-2">
-                      <Label htmlFor="email" className="text-gray-300">
-                        Email
+                      <Label htmlFor="phone" className="text-gray-300">
+                        Телефон
                       </Label>
                       <Input
-                        id="email"
-                        type="email"
+                        id="phone"
+                        type="tel"
                         required
-                        value={formData.email}
+                        value={formData.phone}
                         onChange={handleChange}
-                        placeholder="email@example.com"
+                        placeholder="+7 (777) 000-00-00"
                         className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus-visible:ring-green-500"
                       />
                     </div>

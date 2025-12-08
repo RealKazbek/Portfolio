@@ -12,13 +12,13 @@ export async function POST(req: Request) {
   }
 
   try {
-    const { name, email, subject, message } = await req.json();
+    const { name, phone, subject, message } = await req.json();
 
     const text = `
 🔥 <b>Новая заявка с портфолио!</b>
 
 👤 <b>Имя:</b> ${name}
-📧 <b>Email:</b> ${email}
+📱 <b>Телефон:</b> ${phone}
 📝 <b>Тема:</b> ${subject}
 
 💬 <b>Сообщение:</b>

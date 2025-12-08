@@ -5,60 +5,61 @@ import Header from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://kazbekport.vercel.app";
+const SITE_URL = "https://kazbekport.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Kazbek | Full Stack Developer",
-    template: "%s | Kazbek Portfolio",
+    default: "Kazbek Assanbek | Full Stack Developer",
+    template: "%s | Kazbek Assanbek",
   },
   description:
-    "Портфолио Full Stack разработчика и студента МУИТ. Next.js, Python, AI интеграции и Telegram боты.",
+    "Личный сайт разработчика: Асанбек Казбек Талғатұлы (Kazbek Assanbek). Full Stack Developer, студент МУИТ. Разработка веб-сайтов, Telegram ботов и AI решений.",
   keywords: [
-    "Full Stack",
-    "Developer",
-    "Kazakhstan",
-    "IITU",
-    "Next.js",
-    "React",
-    "Python",
-    "Telegram Bot",
-    "Portfolio",
+    "Kazbek Assanbek",
+    "Асанбек Казбек",
+    "Асанбек Казбек Талғатұлы",
+    "Kazbek Assanbek Talgatuly",
+    "Full Stack Developer Kazakhstan",
+    "Разработчик МУИТ",
+    "IITU Student",
+    "Next.js Developer",
   ],
-  authors: [{ name: "Kazbek" }],
-  creator: "Kazbek",
+  authors: [{ name: "Kazbek Assanbek", url: SITE_URL }],
+  creator: "Kazbek Assanbek",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 
   openGraph: {
-    type: "website",
+    type: "profile",
+    firstName: "Kazbek",
+    lastName: "Assanbek",
+    username: "RealKazbek",
+    gender: "male",
     locale: "ru_RU",
     url: SITE_URL,
-    title: "Kazbek | Full Stack Developer",
+    title: "Kazbek Assanbek | Full Stack Developer",
     description:
-      "Разрабатываю современные веб-приложения, ботов и внедряю AI. Студент МУИТ.",
-    siteName: "Kazbek Portfolio",
+      "Асанбек Казбек — Full Stack разработчик. Студент МУИТ, создатель инновационных проектов.",
+    siteName: "Kazbek Assanbek Portfolio",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Kazbek Portfolio Preview",
+        alt: "Kazbek Assanbek Portfolio",
       },
     ],
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Kazbek | Full Stack Developer",
-    description: "Портфолио Full Stack разработчика. Next.js, Python, AI.",
-    images: ["/og-image.jpg"],
-  },
-
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -71,8 +72,42 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Kazbek Assanbek",
+    alternateName: [
+      "Асанбек Казбек",
+      "Асанбек Казбек Талғатұлы",
+      "Kazbek Assanbek Talgatuly",
+    ],
+    url: SITE_URL,
+    image: `${SITE_URL}/og-image.jpg`,
+    jobTitle: "Full Stack Developer",
+    worksFor: {
+      "@type": "Organization",
+      name: "Freelance / IITU",
+    },
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: "International IT University (IITU)",
+    },
+    sameAs: [
+      "https://t.me/RealKazbek",
+      "https://github.com/RealKazbek",
+      "https://www.linkedin.com/in/казбек-асанбек-1b60bb363/",
+      "https://instagram.com/RealKazbek",
+    ],
+  };
+
   return (
     <html lang="ru" className="dark scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${inter.className} antialiased bg-black text-white`}>
         <Header />
         {children}

@@ -39,6 +39,10 @@ export default function Home() {
             IITU Student & Developer
           </motion.div>
 
+          <p className="text-green-500 font-mono mb-4 tracking-widest uppercase">
+            Kazbek Assanbek Talgatuly
+          </p>
+
           <motion.h1
             initial="hidden"
             animate="visible"

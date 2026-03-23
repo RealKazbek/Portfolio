@@ -18,15 +18,35 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    id: 7,
+    title: "Telegram Web (Realtime)",
+    description:
+      "Веб-версия Telegram с поддержкой realtime-чатов через WebSocket. Реализованы мгновенные сообщения, онлайн-статусы и синхронизация диалогов.",
+    tech: ["Next.js", "Django", "WebSocket", "Redis"],
+    status: "Удалено",
+    demoLink: null,
+    repoLink: null,
+  },
+  {
+    id: 8,
+    title: "1Trading AI",
+    description:
+      "AI-платформа для торговли. Анализирует рынок, предлагает сделки и автоматизирует принятие решений с помощью моделей машинного обучения.",
+    tech: ["Next.js", "Django", "OpenAI API", "PostgreSQL"],
+    status: "Потеряно",
+    demoLink: null,
+    repoLink: null,
+  },
+  {
     id: 6,
     title: "INO IITU",
     description:
       "Инновационная платформа для МУИТ. Объединяет веб-интерфейс и Telegram-бота для быстрого доступа к академическим сервисам и расписанию.",
     tech: ["Next.js", "Aiogram", "PostgreSQL"],
-    status: "Новинка",
+    status: "Удалено",
     image: "/projects/ino.png",
-    demoLink: "https://shyraq.store",
-    repoLink: "https://shyraq.store",
+    demoLink: null,
+    repoLink: null,
   },
   {
     id: 2,
@@ -34,10 +54,10 @@ const projects = [
     description:
       "Хакатон-проект. Единый хаб для студентов и абитуриентов университетов Казахстана. Выступал в роли PM и Frontend разработчика.",
     tech: ["Next.js", "Google AI Studio", "Data Analysis"],
-    status: "Хакатон",
+    status: "Удалено",
     image: "/projects/universe.png",
-    demoLink: "https://universe.lat/",
-    repoLink: "https://universe.lat/",
+    demoLink: null,
+    repoLink: null,
   },
   {
     id: 5,
@@ -45,9 +65,9 @@ const projects = [
     description:
       "Альтернативный, быстрый интерфейс для университетской системы. Работает мгновенно. Включает Telegram-бота для уведомлений.",
     tech: ["Next.js", "Aiogram", "PostgreSQL"],
-    status: "Архив",
-    demoLink: "#",
-    repoLink: "#",
+    status: "Потеряно",
+    demoLink: null,
+    repoLink: null,
   },
   {
     id: 1,
@@ -55,9 +75,9 @@ const projects = [
     description:
       "Полноценный маркетплейс для заказа товаров из Китая. Локализация на казахский язык, админ-панель.",
     tech: ["Next.js", "PostgreSQL", "Tailwind CSS", "Django"],
-    status: "Архив",
-    demoLink: "#",
-    repoLink: "#",
+    status: "Удалено",
+    demoLink: null,
+    repoLink: null,
   },
   {
     id: 3,
@@ -65,9 +85,9 @@ const projects = [
     description:
       "Мобильное приложение с интеграцией AI. Анализирует банковские траты и дает саркастичные советы по экономии.",
     tech: ["Kotlin", "Django", "OpenAI API", "Android"],
-    status: "Архив",
-    demoLink: "#",
-    repoLink: "#",
+    status: "Потеряно",
+    demoLink: null,
+    repoLink: null,
   },
   {
     id: 4,
@@ -75,9 +95,9 @@ const projects = [
     description:
       "Бот для компании '4 сала' для расчета рациона скота. Автоматизирует сложные формулы и выдает результат за секунды.",
     tech: ["Python", "Aiogram", "PostgreSQL"],
-    status: "Архив",
-    demoLink: "#",
-    repoLink: "#",
+    status: "Удалено",
+    demoLink: null,
+    repoLink: null,
   },
 ];
 
@@ -172,23 +192,43 @@ export default function ProjectsPage() {
                 </CardContent>
 
                 <CardFooter className="grid grid-cols-2 gap-3 pt-0 mt-auto">
-                  <Button
-                    variant="outline"
-                    className="w-full gap-2 border-white/10 text-gray-300 hover:bg-white/10 hover:text-white bg-transparent"
-                    asChild
-                  >
-                    <Link href={project.repoLink} target="_blank">
-                      <Github size={16} /> Code
-                    </Link>
-                  </Button>
-                  <Button
-                    className="w-full gap-2 bg-green-600 text-white hover:bg-green-500 border-none shadow-lg shadow-green-900/20"
-                    asChild
-                  >
-                    <Link href={project.demoLink} target="_blank">
-                      <ExternalLink size={16} /> Demo
-                    </Link>
-                  </Button>
+                  {project.repoLink ? (
+                    <Button
+                      variant="outline"
+                      className="w-full gap-2 border-white/10 text-gray-300 hover:bg-white/10 hover:text-white"
+                      asChild
+                    >
+                      <Link href={project.repoLink} target="_blank">
+                        <Github size={16} /> Code
+                      </Link>
+                    </Button>
+                  ) : (
+                    <Button
+                      variant="outline"
+                      disabled
+                      className="w-full gap-2 border-white/10 text-gray-500 cursor-not-allowed"
+                    >
+                      <Github size={16} /> Недоступно
+                    </Button>
+                  )}
+
+                  {project.demoLink ? (
+                    <Button
+                      className="w-full gap-2 bg-green-600 text-white hover:bg-green-500 border-none shadow-lg shadow-green-900/20"
+                      asChild
+                    >
+                      <Link href={project.demoLink} target="_blank">
+                        <ExternalLink size={16} /> Demo
+                      </Link>
+                    </Button>
+                  ) : (
+                    <Button
+                      disabled
+                      className="w-full gap-2 bg-gray-700 text-gray-400 cursor-not-allowed"
+                    >
+                      <ExternalLink size={16} /> Недоступно
+                    </Button>
+                  )}
                 </CardFooter>
               </Card>
             </motion.div>

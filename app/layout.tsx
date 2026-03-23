@@ -111,6 +111,7 @@ export default function RootLayout({
           name="google-site-verification"
           content="6OcevrJGy36ZFnyVj5EWtVtNv-aIZ3CzNvPeCFxjb7w"
         />
+        ``
       </head>
       <body className={`${inter.className} antialiased bg-black text-white`}>
         <Header />

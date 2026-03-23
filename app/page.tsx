@@ -150,7 +150,7 @@ export default function Home() {
                 },
               ].map((category, idx) => (
                 <motion.div key={idx} variants={fadeInUp}>
-                  <Card className="bg-black/40 border-white/10 hover:border-white/20 transition-all hover:-translate-y-2 backdrop-blur-sm group overflow-hidden relative">
+                  <Card className="h-full flex flex-col bg-black/40 border-white/10 hover:border-white/20 transition-all hover:-translate-y-2 backdrop-blur-sm group overflow-hidden relative">
                     <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
                     <CardHeader>
@@ -163,7 +163,7 @@ export default function Home() {
                         {category.title}
                       </CardTitle>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="flex-1">
                       <div className="flex flex-wrap gap-2 relative z-10">
                         {category.skills.map((skill) => (
                           <Badge

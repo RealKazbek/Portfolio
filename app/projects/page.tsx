@@ -19,7 +19,7 @@ import { motion } from "framer-motion";
 const projects = [
   {
     id: 7,
-    title: "Telegram Web (Realtime)",
+    title: "Chat Web (Realtime)",
     description:
       "Веб-версия Telegram с поддержкой realtime-чатов через WebSocket. Реализованы мгновенные сообщения, онлайн-статусы и синхронизация диалогов.",
     tech: ["Next.js", "Django", "WebSocket", "Redis"],

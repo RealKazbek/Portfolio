@@ -18,6 +18,26 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    id: 9,
+    title: "TerraCon",
+    description:
+      "Коммерческий full-stack сайт для компании TerraCon. Разработан каталог товаров, страницы услуг, корзина, избранное, админ-функции, SEO-структура, аналитика и Telegram-уведомления.",
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Django",
+      "PostgreSQL",
+      "Docker",
+      "Nginx",
+    ],
+    status: "Завершено",
+    image: "/projects/terracon.png",
+    demoLink: "https://terracon.kz",
+    repoLink: null,
+  },
+  {
     id: 7,
     title: "Chat Web (Realtime)",
     description:

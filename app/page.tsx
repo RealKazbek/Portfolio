@@ -199,33 +199,40 @@ export default function Home() {
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                     </span>
-                    NEWEST RELEASE
+                    IN DEVELOPMENT
                   </div>
                   <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-                    INO IITU
+                    TerraCon
                   </h3>
                   <p className="text-gray-400 leading-relaxed mb-6 text-lg">
-                    Инновационная экосистема для МУИТ. Единое окно доступа к
-                    академическим сервисам через Веб и Telegram-бота. Мгновенное
-                    расписание, оценки и справки.
+                    Коммерческий full-stack сайт для компании TerraCon: каталог
+                    товаров, услуги, корзина, избранное, админ-функции, SEO,
+                    аналитика и Telegram-уведомления.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-8">
-                    {["Next.js", "Aiogram", "PostgreSQL", "Telegram API"].map(
-                      (t) => (
-                        <Badge
-                          key={t}
-                          variant="outline"
-                          className="border-white/20 text-gray-300"
-                        >
-                          {t}
-                        </Badge>
-                      )
-                    )}
+                    {[
+                      "Next.js",
+                      "React",
+                      "TypeScript",
+                      "Tailwind CSS",
+                      "Django",
+                      "PostgreSQL",
+                      "Docker",
+                      "Nginx",
+                    ].map((t) => (
+                      <Badge
+                        key={t}
+                        variant="outline"
+                        className="border-white/20 text-gray-300"
+                      >
+                        {t}
+                      </Badge>
+                    ))}
                   </div>
                 </div>
-                <Link href="/projects">
+                <Link href="https://terracon.kz" target="_blank">
                   <Button className="w-fit rounded-full bg-white text-black hover:bg-gray-200 font-bold px-8">
-                    Смотреть кейс
+                    Посмотреть
                   </Button>
                 </Link>
               </div>
@@ -236,8 +243,8 @@ export default function Home() {
 
                 <div className="relative z-10 w-[85%] h-[70%] rounded-xl overflow-hidden border border-white/20 shadow-2xl transform rotate-3 group-hover:rotate-0 transition-transform duration-700 ease-out">
                   <Image
-                    src="/projects/ino.png"
-                    alt="INO IITU Interface"
+                    src="/projects/terracon.png"
+                    alt="TerraCon Interface"
                     fill
                     className="object-cover object-top"
                   />

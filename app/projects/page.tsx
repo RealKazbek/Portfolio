@@ -21,7 +21,7 @@ const projects = [
     id: 9,
     title: "TerraCon",
     description:
-      "Коммерческий full-stack сайт для компании TerraCon. Разработан каталог товаров, страницы услуг, корзина, избранное, админ-функции, SEO-структура, аналитика и Telegram-уведомления.",
+      "Коммерческий full-stack сайт для TerraCon: каталог товаров, услуги, корзина, избранное, админ-функции, SEO, аналитика и Telegram-уведомления.",
     tech: [
       "Next.js",
       "React",
@@ -32,7 +32,7 @@ const projects = [
       "Docker",
       "Nginx",
     ],
-    status: "Завершено",
+    status: "В разработке",
     image: "/projects/terracon.png",
     demoLink: "https://terracon.kz",
     repoLink: null,
@@ -238,7 +238,7 @@ export default function ProjectsPage() {
                       asChild
                     >
                       <Link href={project.demoLink} target="_blank">
-                        <ExternalLink size={16} /> Demo
+                        <ExternalLink size={16} /> Посмотреть
                       </Link>
                     </Button>
                   ) : (

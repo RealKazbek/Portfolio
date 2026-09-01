@@ -75,9 +75,9 @@ const Header = () => {
                 variant="ghost"
                 size="icon"
                 className="md:hidden text-white hover:bg-white/10"
+                aria-label="Открыть меню"
               >
                 <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent

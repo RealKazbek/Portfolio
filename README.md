@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kazbek Portfolio
+
+A personal developer portfolio for Kazbek Assanbek, presenting selected projects, technical experience, education, and contact information in a responsive interface.
+
+## Preview
+
+![Portfolio Preview](./public/og-image.jpg)
+
+## Features
+
+- Responsive landing, projects, about, contact, and custom 404 pages
+- Animated page elements and an interactive spotlight background
+- Project gallery with screenshots, technology tags, and live links where available
+- Contact form that forwards enquiries to Telegram through a server-side API route
+- Search-friendly metadata, Open Graph image, JSON-LD profile data, sitemap, and robots configuration
+
+## Tech Stack
+
+- Next.js 16 with the App Router
+- React 19 and TypeScript
+- Tailwind CSS
+- Framer Motion
+- Radix UI primitives and Lucide icons
+- Telegram Bot API for contact form delivery
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+git clone https://github.com/RealKazbek/portfolio.git
+cd portfolio
+npm install
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The contact form requires `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID`. The rest of the portfolio can be viewed locally without configuring them.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Useful checks:
 
-## Learn More
+```bash
+npm run lint
+npm run typecheck
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+app/          Pages, metadata routes, styles, and the contact API route
+components/   Navigation, visual effects, and reusable UI components
+lib/          Shared utilities
+public/       Favicons, social preview, and project images
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+The application can be deployed on [Vercel](https://vercel.com/) by importing the GitHub repository. Add `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` to the project environment variables before deploying so the contact form can deliver messages.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Kazbek<br>
+GitHub: [RealKazbek](https://github.com/RealKazbek)

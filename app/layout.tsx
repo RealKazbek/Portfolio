@@ -27,6 +27,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Kazbek Assanbek", url: SITE_URL }],
   creator: "Kazbek Assanbek",
+  alternates: { canonical: "/" },
+  icons: { icon: "/favicon.ico" },
 
   robots: {
     index: true,
@@ -55,8 +57,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
+        width: 2848,
+        height: 1504,
         alt: "Kazbek Assanbek Portfolio",
       },
     ],
@@ -111,7 +113,6 @@ export default function RootLayout({
           name="google-site-verification"
           content="6OcevrJGy36ZFnyVj5EWtVtNv-aIZ3CzNvPeCFxjb7w"
         />
-        ``
       </head>
       <body className={`${inter.className} antialiased bg-black text-white`}>
         <Header />

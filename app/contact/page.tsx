@@ -51,7 +51,7 @@ export default function ContactPage() {
       } else {
         alert("Ошибка при отправке. Попробуйте позже.");
       }
-    } catch (error) {
+    } catch {
       alert("Что-то пошло не так.");
     } finally {
       setIsLoading(false);

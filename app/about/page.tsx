@@ -1,6 +1,5 @@
 "use client";
 
-import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -20,12 +19,28 @@ import {
 import { SpotlightBackground } from "@/components/ui/SpotlightBackground";
 import { motion } from "framer-motion";
 
-const skills = [
-  { name: "Python (Django / AI)", level: 90 },
-  { name: "Next.js / React", level: 85 },
-  { name: "Telegram Bots (Aiogram)", level: 95 },
-  { name: "React Native (Mobile)", level: 80 },
-  { name: "Data Structures", level: 75 },
+const technologyGroups = [
+  {
+    name: "Frontend",
+    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+  },
+  {
+    name: "Backend",
+    technologies: ["Go", "Python", "Django", "PostgreSQL"],
+  },
+  {
+    name: "Infrastructure",
+    technologies: ["Docker", "Nginx", "Linux", "Git"],
+  },
+  {
+    name: "AI & Automation",
+    technologies: [
+      "OpenAI API",
+      "Google AI Studio",
+      "Telegram Bots",
+      "Algorithms",
+    ],
+  },
 ];
 
 const fadeInUp = {
@@ -53,14 +68,15 @@ export default function AboutPage() {
           className="max-w-4xl mx-auto mb-12 text-center space-y-4"
         >
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white">
-            Об{" "}
+            Обо{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">
-              Операторе
+              мне
             </span>
           </h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Студент МУИТ, Full Stack разработчик и энтузиаст искусственного
-            интеллекта. Код это мой инструмент для создания будущего.
+            Студент 4 курса МУИТ, Frontend-разработчик и начинающий Go
+            Backend-разработчик. Интересуюсь AI, FinTech, автоматизацией и
+            созданием реальных цифровых продуктов.
           </p>
         </motion.div>
 
@@ -81,21 +97,18 @@ export default function AboutPage() {
                 </CardHeader>
                 <CardContent className="space-y-4 text-gray-300 leading-relaxed">
                   <p>
-                    Я студент 3-го курса{" "}
-                    <strong className="text-white">
-                      Международного IT Университета (IITU)
-                    </strong>
-                    . В отличие от многих, я не просто пишу код, я создаю
-                    продукты. Моя суперсила это сочетание сильного бэкенда на{" "}
-                    <span className="text-green-400">Django/Python</span> и
-                    современного фронтенда на{" "}
-                    <span className="text-green-400">Next.js</span>.
+                    Я студент 4 курса Международного университета
+                    информационных технологий (IITU) по направлению Computer
+                    Engineering. Основной опыт связан с Frontend-разработкой на
+                    React, Next.js и TypeScript. Сейчас активно развиваюсь в Go
+                    Backend, изучаю серверную архитектуру, REST API, PostgreSQL
+                    и Docker.
                   </p>
                   <p>
-                    Активно внедряю{" "}
-                    <strong className="text-white">AI-технологии</strong> в свои
-                    проекты. Решаю сложные алгоритмические задачи (50+ на
-                    LeetCode), чтобы держать ум в тонусе.
+                    Также работаю с Python и интересуюсь AI-интеграциями,
+                    FinTech и автоматизацией. Регулярно практикую алгоритмы и
+                    участвую в хакатонах, чтобы улучшать инженерное мышление и
+                    навыки командной разработки.
                   </p>
                 </CardContent>
               </Card>
@@ -113,14 +126,14 @@ export default function AboutPage() {
                   <div className="mb-2">
                     <p className="font-bold text-white text-lg">IITU (МУИТ)</p>
                     <p className="text-sm text-gray-400">
-                      3 курс, Computer Science
+                      4 курс, Computer Engineering
                     </p>
                   </div>
                   <Badge
                     variant="secondary"
                     className="mt-2 bg-white/10 text-white hover:bg-white/20"
                   >
-                    2023 {"<-->"} 2027
+                    2023 — 2027
                   </Badge>
                 </CardContent>
               </Card>
@@ -140,14 +153,14 @@ export default function AboutPage() {
                     IT FEST Hackathon
                   </CardTitle>
                   <CardDescription className="text-gray-500">
-                    Роль: Project Manager & Frontend Dev
+                    Роль: Project Manager & Frontend Developer
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 mb-4 text-sm">
-                    Разрабатывали проект UniVerse. Я руководил командой и
-                    отвечал за клиентскую часть. Получил колоссальный опыт
-                    управления продуктом в сжатые сроки.
+                    Работал над проектом UniVerse: координировал команду и
+                    отвечал за клиентскую часть продукта в условиях
+                    ограниченного времени.
                   </p>
                   <div className="flex gap-2">
                     <Badge
@@ -178,8 +191,9 @@ export default function AboutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 mb-4 text-sm">
-                    Отвечал за UI/UX и интеграцию с API банка. Реализовал
-                    адаптивный интерфейс сложной финансовой системы за 48 часов.
+                    Работал над интерфейсом FinTech-прототипа, адаптивной
+                    версткой и интеграцией клиентской части с API в рамках
+                    хакатона.
                   </p>
                   <div className="flex gap-2">
                     <Badge
@@ -211,17 +225,22 @@ export default function AboutPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  {skills.map((skill) => (
-                    <div key={skill.name} className="space-y-2">
-                      <div className="flex justify-between text-sm font-medium text-gray-300">
-                        <span>{skill.name}</span>
-                        <span className="text-gray-500">{skill.level}%</span>
+                  {technologyGroups.map((group) => (
+                    <div key={group.name} className="space-y-3">
+                      <p className="text-sm font-medium text-gray-300">
+                        {group.name}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {group.technologies.map((technology) => (
+                          <Badge
+                            key={technology}
+                            variant="outline"
+                            className="border-white/20 text-gray-400"
+                          >
+                            {technology}
+                          </Badge>
+                        ))}
                       </div>
-                      <Progress
-                        value={skill.level}
-                        className="h-2 bg-white/10"
-                      />
-                      {/* Индикатор прогресса будет зеленым благодаря global css --primary */}
                     </div>
                   ))}
                 </CardContent>
@@ -239,15 +258,13 @@ export default function AboutPage() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-gray-300">
-                    Регулярно решаю алгоритмические задачи для улучшения
-                    логического мышления.
+                    Регулярно решаю алгоритмические задачи на LeetCode и других
+                    платформах, развивая навыки работы со структурами данных и
+                    алгоритмами.
                   </p>
                   <div className="flex items-center gap-4 bg-white/5 p-4 rounded-lg border border-white/10">
-                    <div className="text-3xl font-bold text-white">50+</div>
-                    <div className="text-sm text-gray-400">
-                      Задач решено на{" "}
-                      <span className="text-green-400 font-bold">LeetCode</span>{" "}
-                      (Python)
+                    <div className="text-lg font-bold text-green-400">
+                      Algorithms
                     </div>
                   </div>
                 </CardContent>
@@ -263,9 +280,9 @@ export default function AboutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 text-sm">
-                    Умею интегрировать LLM (ChatGPT, Claude API) в реальные
-                    проекты. Создаю сложных Telegram-ботов с админками и базами
-                    данных.
+                    Работаю с AI API и автоматизацией: интегрирую LLM в
+                    веб-приложения, экспериментирую с AI-ассистентами и
+                    Telegram-ботами.
                   </p>
                 </CardContent>
               </Card>

@@ -9,20 +9,21 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Kazbek Assanbek | Full Stack Developer",
+    default: "Kazbek Assanbek | Frontend & Go Backend Developer",
     template: "%s | Kazbek Assanbek",
   },
   description:
-    "Личный сайт разработчика: Асанбек Казбек Талғатұлы (Kazbek Assanbek). Full Stack Developer, студент МУИТ. Разработка веб-сайтов, Telegram ботов и AI решений.",
+    "Личный сайт Казбека Асанбека — Frontend-разработчика и студента 4 курса МУИТ. React, Next.js, TypeScript, Go, Python, AI, FinTech и backend-разработка.",
   keywords: [
     "Kazbek Assanbek",
-    "Асанбек Казбек",
-    "Асанбек Казбек Талғатұлы",
-    "Kazbek Assanbek Talgatuly",
-    "Full Stack Developer Kazakhstan",
-    "Разработчик МУИТ",
+    "Frontend Developer Kazakhstan",
+    "Go Developer Kazakhstan",
+    "Go Backend",
+    "React Developer",
     "IITU Student",
     "Next.js Developer",
+    "AI",
+    "FinTech",
   ],
   authors: [{ name: "Kazbek Assanbek", url: siteUrl }],
   creator: "Kazbek Assanbek",
@@ -49,15 +50,15 @@ export const metadata: Metadata = {
     gender: "male",
     locale: "ru_RU",
     url: siteUrl,
-    title: "Kazbek Assanbek | Full Stack Developer",
+    title: "Kazbek Assanbek | Frontend & Go Backend Developer",
     description:
-      "Асанбек Казбек — Full Stack разработчик. Студент МУИТ, создатель инновационных проектов.",
+      "Казбек Асанбек — Frontend-разработчик и студент 4 курса МУИТ, развивающийся в Go Backend. React, Next.js, TypeScript, AI и FinTech.",
     siteName: "Kazbek Assanbek Portfolio",
     images: [
       {
-        url: "/og-image.jpg",
-        width: 2848,
-        height: 1504,
+        url: "/og-image.png",
+        width: 1726,
+        height: 911,
         alt: "Kazbek Assanbek Portfolio",
       },
     ],
@@ -83,14 +84,10 @@ export default function RootLayout({
       "Kazbek Assanbek Talgatuly",
     ],
     url: siteUrl,
-    image: `${siteUrl}/og-image.jpg`,
-    jobTitle: "Full Stack Developer",
-    worksFor: {
-      "@type": "Organization",
-      name: "Freelance / IITU",
-    },
-    alumniOf: {
-      "@type": "CollegeOrUniversity",
+    image: `${siteUrl}/og-image.png`,
+    jobTitle: "Frontend Developer",
+    affiliation: {
+      "@type": "EducationalOrganization",
       name: "International IT University (IITU)",
     },
     sameAs: [

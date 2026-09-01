@@ -4,7 +4,8 @@ import { siteUrl } from "@/lib/site";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = "2026-05-05T00:00:00.000Z";
+  // Update this release date when public portfolio content changes.
+  const lastModified = "2026-09-01T00:00:00.000Z";
 
   return [
     {

@@ -7,7 +7,6 @@ import Link from "next/link";
 import { Terminal, Code, Cpu, Database, ArrowRight } from "lucide-react";
 import { SpotlightBackground } from "@/components/ui/SpotlightBackground";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -36,7 +35,7 @@ export default function Home() {
             className="inline-flex items-center rounded-full border border-green-500/30 bg-green-500/10 px-3 py-1 text-sm font-medium text-green-400 backdrop-blur-sm"
           >
             <span className="flex h-2 w-2 rounded-full bg-green-500 mr-2 animate-pulse"></span>
-            IITU Student & Developer
+            4th-Year IITU Student & Developer
           </motion.div>
 
           <p className="text-green-500 font-mono mb-4 tracking-widest uppercase">
@@ -61,10 +60,9 @@ export default function Home() {
             variants={fadeInUp}
             className="text-xl text-gray-400 max-w-2xl leading-relaxed"
           >
-            Привет! Я студент 3 курса МУИТ и Full Stack разработчик. Объединяю{" "}
-            <span className="text-white font-bold">AI технологии</span>,
-            надежный код и современный дизайн для создания уникальных
-            веб-продуктов.
+            Привет! Я студент 4 курса МУИТ и Frontend-разработчик, развивающийся
+            в Go Backend. Создаю современные веб-продукты и интересуюсь AI,
+            FinTech и автоматизацией.
           </motion.p>
 
           <motion.div
@@ -121,22 +119,21 @@ export default function Home() {
                 {
                   icon: Code,
                   title: "Frontend",
-                  skills: ["Next.js", "React", "Tailwind", "Framer Motion"],
+                  skills: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
                   color: "text-blue-400",
                 },
                 {
                   icon: Database,
                   title: "Backend",
-                  skills: ["Django", "Python", "PostgreSQL", "MongoDB"],
+                  skills: ["Go", "Python", "Django", "PostgreSQL"],
                   color: "text-green-400",
                 },
                 {
                   icon: Cpu,
-                  title: "AI & Data",
+                  title: "AI & Automation",
                   skills: [
                     "OpenAI API",
-                    "GOOGLE AI STUDIO",
-                    "Pandas",
+                    "Google AI Studio",
                     "Telegram Bots",
                     "Algorithms",
                   ],
@@ -145,7 +142,7 @@ export default function Home() {
                 {
                   icon: Terminal,
                   title: "Tools",
-                  skills: ["Git", "Render", "Neon", "Vercel"],
+                  skills: ["Docker", "Nginx", "Linux", "Git"],
                   color: "text-orange-400",
                 },
               ].map((category, idx) => (
@@ -183,78 +180,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-24 container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-            className="relative rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/5 to-black overflow-hidden shadow-2xl group"
-          >
-            <div className="grid md:grid-cols-2 gap-0">
-              <div className="p-8 md:p-16 flex flex-col justify-center space-y-6 z-10">
-                <div>
-                  <div className="text-green-400 font-mono text-sm mb-2 tracking-widest flex items-center gap-2">
-                    <span className="relative flex h-2 w-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                    </span>
-                    IN DEVELOPMENT
-                  </div>
-                  <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-                    TerraCon
-                  </h3>
-                  <p className="text-gray-400 leading-relaxed mb-6 text-lg">
-                    Коммерческий full-stack сайт для компании TerraCon: каталог
-                    товаров, услуги, корзина, избранное, админ-функции, SEO,
-                    аналитика и Telegram-уведомления.
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-8">
-                    {[
-                      "Next.js",
-                      "React",
-                      "TypeScript",
-                      "Tailwind CSS",
-                      "Django",
-                      "PostgreSQL",
-                      "Docker",
-                      "Nginx",
-                    ].map((t) => (
-                      <Badge
-                        key={t}
-                        variant="outline"
-                        className="border-white/20 text-gray-300"
-                      >
-                        {t}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-                <Link href="https://terracon.kz" target="_blank">
-                  <Button className="w-fit rounded-full bg-white text-black hover:bg-gray-200 font-bold px-8">
-                    Посмотреть
-                  </Button>
-                </Link>
-              </div>
-
-              <div className="relative h-64 md:h-auto min-h-[350px] bg-gradient-to-br from-green-500/10 to-blue-600/10 flex items-center justify-center overflow-hidden">
-                <div className="absolute w-64 h-64 bg-green-500/20 rounded-full blur-3xl -top-10 -right-10 animate-pulse" />
-                <div className="absolute w-64 h-64 bg-blue-500/20 rounded-full blur-3xl bottom-10 left-10 animate-pulse delay-700" />
-
-                <div className="relative z-10 w-[85%] h-[70%] rounded-xl overflow-hidden border border-white/20 shadow-2xl transform rotate-3 group-hover:rotate-0 transition-transform duration-700 ease-out">
-                  <Image
-                    src="/projects/terracon.png"
-                    alt="TerraCon Interface"
-                    fill
-                    className="object-cover object-top"
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-50 pointer-events-none" />
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </section>
       </main>
     </SpotlightBackground>
   );

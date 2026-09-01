@@ -1,10 +1,10 @@
 # Kazbek Portfolio
 
-A personal developer portfolio for Kazbek Assanbek, presenting selected projects, technical experience, education, and contact information in a responsive interface.
+A personal developer portfolio for Kazbek Assanbek, a fourth-year IITU Computer Engineering student focused on frontend development and growing into Go backend development. It presents selected projects, technical experience, education, and contact information in a responsive interface.
 
 ## Preview
 
-![Portfolio Preview](./public/og-image.jpg)
+![Portfolio Preview](./public/og-image.png)
 
 ## Features
 

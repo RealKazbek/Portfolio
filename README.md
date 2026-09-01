@@ -35,7 +35,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-The contact form requires `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID`. The rest of the portfolio can be viewed locally without configuring them.
+The contact form requires `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID`. `SITE_URL` controls canonical, Open Graph, sitemap, and robots URLs. The rest of the portfolio can be viewed locally with the example defaults.
 
 Useful checks:
 
@@ -54,9 +54,60 @@ lib/          Shared utilities
 public/       Favicons, social preview, and project images
 ```
 
-## Deployment
+## Self-Hosting
 
-The application can be deployed on [Vercel](https://vercel.com/) by importing the GitHub repository. Add `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` to the project environment variables before deploying so the contact form can deliver messages.
+The production server listens on port `3000`. Set the variables from `.env.example`, using the final HTTPS origin for `SITE_URL`. Because Next.js pre-renders public metadata, `SITE_URL` must be available during the build as well as at runtime.
+
+### Node.js
+
+```bash
+npm ci
+set -a
+source .env.production
+set +a
+npm run build
+NODE_ENV=production PORT=3000 npm start
+```
+
+Use a process supervisor such as systemd to keep the server running and restart it after failures or host reboots.
+
+### Docker
+
+```bash
+docker build --build-arg SITE_URL="$SITE_URL" -t kazbek-portfolio .
+docker run --detach \
+  --name kazbek-portfolio \
+  --env-file .env.production \
+  --publish 127.0.0.1:3000:3000 \
+  --restart unless-stopped \
+  kazbek-portfolio
+```
+
+Binding to `127.0.0.1` keeps the application private behind the reverse proxy.
+
+### Nginx reverse proxy
+
+Terminate HTTPS at Nginx and proxy requests to the internal Next.js server:
+
+```nginx
+server {
+    listen 80;
+    server_name _;
+
+    location / {
+        proxy_pass http://127.0.0.1:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+}
+```
+
+Replace the catch-all `server_name`, configure TLS certificates, and set `SITE_URL` to the resulting public HTTPS origin before production use.
 
 ## Author
 

@@ -2,13 +2,12 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import { siteUrl } from "@/lib/site";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const SITE_URL = "https://kazbekport.vercel.app";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Kazbek Assanbek | Full Stack Developer",
     template: "%s | Kazbek Assanbek",
@@ -25,7 +24,7 @@ export const metadata: Metadata = {
     "IITU Student",
     "Next.js Developer",
   ],
-  authors: [{ name: "Kazbek Assanbek", url: SITE_URL }],
+  authors: [{ name: "Kazbek Assanbek", url: siteUrl }],
   creator: "Kazbek Assanbek",
   alternates: { canonical: "/" },
   icons: { icon: "/favicon.ico" },
@@ -49,7 +48,7 @@ export const metadata: Metadata = {
     username: "RealKazbek",
     gender: "male",
     locale: "ru_RU",
-    url: SITE_URL,
+    url: siteUrl,
     title: "Kazbek Assanbek | Full Stack Developer",
     description:
       "Асанбек Казбек — Full Stack разработчик. Студент МУИТ, создатель инновационных проектов.",
@@ -83,8 +82,8 @@ export default function RootLayout({
       "Асанбек Казбек Талғатұлы",
       "Kazbek Assanbek Talgatuly",
     ],
-    url: SITE_URL,
-    image: `${SITE_URL}/og-image.jpg`,
+    url: siteUrl,
+    image: `${siteUrl}/og-image.jpg`,
     jobTitle: "Full Stack Developer",
     worksFor: {
       "@type": "Organization",
